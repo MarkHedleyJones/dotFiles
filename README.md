@@ -87,7 +87,7 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 Set the keybord repeat rate and delay
 ```
-echo xset r rate 200 25 >> ~/.bashrc
+echo xset r rate 150 25 >> ~/.bashrc
 echo setxkbmap -option \"shift:both_capslock\" >> ~/.bashrc
 echo xmodmap -e \"clear Lock\" >> ~/.bashrc
 ```
