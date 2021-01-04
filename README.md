@@ -89,6 +89,7 @@ Set the keybord repeat rate and delay
 ```
 echo xset r rate 200 25 >> ~/.bashrc
 echo setxkbmap -option "shift:both_capslock" >> ~/.bashrc
+echo xmodmap -e \"clear Lock\" >> ~/.bashrc
 ```
 Setup custom aliases for bash
 ```
