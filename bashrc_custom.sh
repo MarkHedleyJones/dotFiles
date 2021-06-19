@@ -9,3 +9,8 @@ alias oien='cd ~/repos/sq-slammer'
 xset r rate 175 25
 setxkbmap -option "shift:both_capslock"
 xmodmap -e "clear Lock"
+
+if [[ $(stat -c '%U' /sys/class/backlight/intel_backlight/brightness) != 'mark' ]]; then
+  echo "Let's change the ownership of /sys/class/backlight/intel_backlight/brightness..."
+  sudo chown mark /sys/class/backlight/intel_backlight/brightness
+fi

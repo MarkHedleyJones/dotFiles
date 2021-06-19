@@ -66,10 +66,17 @@ bindsym $mod+ctrl+shift+y exec ddcutil --bus=1 setvcp 14 0x08
 bindsym $mod+ctrl+shift+semicolon exec ddcutil --bus=1 setvcp 14 0x09
 
 # Brightness
-bindsym $mod+ctrl+j exec ddcutil --bus=1 setvcp 10 1
-bindsym $mod+ctrl+l exec ddcutil --bus=1 setvcp 10 25
-bindsym $mod+ctrl+u exec ddcutil --bus=1 setvcp 10 50
-bindsym $mod+ctrl+y exec ddcutil --bus=1 setvcp 10 75
+bindsym $mod+ctrl+1 exec echo 10 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+2 exec echo 17 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+3 exec echo 28 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+4 exec echo 46 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+5 exec echo 77 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+6 exec echo 129 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+7 exec echo 215 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+8 exec echo 359 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+9 exec echo 599 > /sys/class/backlight/intel_backlight/brightness
+bindsym $mod+ctrl+0 exec echo 1000 > /sys/class/backlight/intel_backlight/brightness
+
 bindsym $mod+ctrl+semicolon exec ddcutil --bus=1 setvcp 10 100
 
 bindsym ctrl+shift+comma exec printf "$(date +%F)" | xclip -selection c
